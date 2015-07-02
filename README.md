@@ -2,23 +2,26 @@
 
 Bot Detector is a simple npm plugin that fetches the list of bot user-agents from http://www.user-agents.org/allagents.xml .  It will return true if the string is a bot or false if it is not.
 
-On require, it loads the XML from user-agents.org, which sometimes can take ~10 seconds
+On require, it loads the XML from a local file.  
 
 ## Usage
 
-var botDetect = require('botDetect');
+    var botDetect = require('botDetect');
+    botDetect.isBot('user agent string');
 
+## Updating bot list
 
-botDetect.isBot('user agent string');
+To update the list of bots from www.user-agents.org, just run the following command:
 
+    node updateBotList.js
 
 ## License ##
 
-The jQuery Emoji Picker is licensed under ISC.
+bot-detector is licensed under ISC.
 
 ## About ##
 
-The jQuery Emoji Picker was developed by the team at [Wedgies](http://www.wedgies.com).
+bot-detector was developed by the team at [Wedgies](http://www.wedgies.com).
 
 Wedgies is a digital survey platform that gives media, journalists and brands in-line survey capabilities inside social media, their website, and their apps — where they can collect millions of opinions from their readers and users. Wedgies is the leading social survey platform that enables publishers to collect survey respondents directly within social media streams.
 
