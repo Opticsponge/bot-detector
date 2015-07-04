@@ -13,7 +13,7 @@ On require, it loads the XML from a local file.
 
 To update the list of bots from www.user-agents.org, just run the following command:
 
-    node updateBotList.js
+    grunt updateBotList
 
 ## License ##
 
