@@ -4,7 +4,8 @@ var parseString = require('xml2js').parseString;
 var fs = require('fs');
 
 var userAgentsOrgUrl = 'http://www.user-agents.org/allagents.xml';
-var secondUrl = 'http://techpatterns.com/downloads/firefox/useragentswitcher.xml';
+// Doesn't have hardly any bots.  Boo.
+//var secondUrl = 'http://techpatterns.com/downloads/firefox/useragentswitcher.xml';
 
 var ua_list = {};
 var exports = module.exports = {};
@@ -26,7 +27,6 @@ var updateXML = function() {
       }
     });
   });
-  fetchData = 
 }
 
 var fetchData = function(url, callback) {
