@@ -1,5 +1,9 @@
 'use strict';
 var fs = require('fs');
+// Read bot list from user-agents.org
+var botlist = require('./botlist.json');
+// Read custom bot list
+var custombotlist = require('./custombotlist.json');
 
 var ua_list = {};
 var exports = module.exports = {};
@@ -23,25 +27,11 @@ var isBot = function(ua_string) {
 exports.isBot = isBot;
 
 var loadBotList = function(callback) {
-  // Read bot list from user-agents.org
-  fs.readFile('botlist.json', 'utf-8',  function(err, data) {
-    if (err) {
-      callback(err); 
-    }
-    ua_list = JSON.parse(data);
-
-    // Read custom botlist
-    fs.readFile('customBotList.json', 'utf-8', function(err, data) {
-      if (err) {
-        callback(err); 
-      }
-      var customs = JSON.parse(data);
-      for (var attrname in customs) { 
-        ua_list[attrname] = customs[attrname]; 
-      }
-      callback(null);
-    });
-  });
+  ua_list = botlist;
+  for (var attrname in custombotlist) { 
+    ua_list[attrname] = custombotlist[attrname]; 
+  }
+  callback(null);
 }
 // Added so that tests would wait until the bot list is loaded before executing
 exports.loadBotList = loadBotList;
