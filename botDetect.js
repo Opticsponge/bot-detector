@@ -3,7 +3,7 @@ var fs = require('fs');
 // Read bot list from user-agents.org
 var botlist = require('./botlist.json');
 // Read custom bot list
-var custombotlist = require('./custombotlist.json');
+var custombotlist = require('./customBotlist.json');
 
 var ua_list = {};
 var exports = module.exports = {};
