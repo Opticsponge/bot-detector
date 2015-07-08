@@ -1,6 +1,6 @@
 {
   "name": "bot-detector",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "It uses the user-agents.org xml file for detecting bots.",
   "main": "botDetect.js",
   "scripts": {

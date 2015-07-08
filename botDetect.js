@@ -28,8 +28,8 @@ exports.isBot = isBot;
 
 var loadBotList = function(callback) {
   ua_list = botlist;
-  for (var attrname in custombotlist) { 
-    ua_list[attrname] = custombotlist[attrname]; 
+  for (var attrname in custombotlist) {
+    ua_list[attrname] = custombotlist[attrname];
   }
   callback(null);
 }
@@ -38,6 +38,6 @@ exports.loadBotList = loadBotList;
 
 loadBotList(function() {
    uaCount(function(count) {
-    console.log(count);
+    console.log("Bot detector loaded.  Bot list count: " + count);
   });
 });
