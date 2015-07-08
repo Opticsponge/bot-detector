@@ -38,6 +38,10 @@ exports.loadBotList = loadBotList;
 
 loadBotList(function() {
    uaCount(function(count) {
-    console.log("Bot detector loaded.  Bot list count: " + count);
+     if (count === 0) {
+       console.log("WARNING: No bot list loaded.  Bot list count is 0");
+     } else {
+       console.log("Bot detector loaded.  Bot list count: " + count);
+     }
   });
 });

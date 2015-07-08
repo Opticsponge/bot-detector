@@ -2,7 +2,7 @@
 
 Bot Detector is a simple npm plugin that fetches the list of bot user-agents from http://www.user-agents.org/allagents.xml .  It will return true if the string is a bot or false if it is not.
 
-On require, it loads the XML from a local file.  
+On require, it loads the XML from a local file.  On require, it will also spit out a debug message listing the number of bots loaded.  If there are no bots loaded from the botlist, it will throw a warning message.
 
 ## Usage
 
